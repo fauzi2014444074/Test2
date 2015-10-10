@@ -19,8 +19,10 @@ public class MacAdd {
 	try {
 			
 		ip = InetAddress.getLocalHost();
-		System.out.println("Current IP address : " + ip.getHostAddress());
-		
+		System.out.println("IP address : " + ip.getHostAddress());
+                System.out.println("Host Name : " + ip.getHostName());
+                System.out.println("Canonical Host Name : " + ip.getCanonicalHostName());
+              
 		NetworkInterface network = NetworkInterface.getByInetAddress(ip);
 			
 		byte[] mac = network.getHardwareAddress();
